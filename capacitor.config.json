@@ -1,0 +1,10 @@
+{
+  "appId": "com.tong.mahjongtablet",
+  "appName": "单机大众麻将",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "android": {
+    "allowMixedContent": false,
+    "captureInput": true
+  }
+}

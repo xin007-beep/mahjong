@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  font-family: "Noto Serif SC", "Source Han Serif SC", "STSong", serif;
+  background:
+    radial-gradient(circle at top, rgba(244, 211, 94, 0.08), transparent 26%),
+    radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.08), transparent 24%),
+    linear-gradient(180deg, #06130f 0%, #091813 100%);
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.mahjong-app {
+  background:
+    radial-gradient(circle at 10% 15%, rgba(255, 230, 170, 0.07), transparent 20%),
+    radial-gradient(circle at 86% 18%, rgba(23, 162, 121, 0.09), transparent 22%),
+    linear-gradient(180deg, #071611 0%, #0a1f19 40%, #06110d 100%);
+}
+
+.mahjong-table {
+  background:
+    radial-gradient(circle at top, rgba(240, 227, 197, 0.08), transparent 32%),
+    linear-gradient(180deg, rgba(10, 53, 40, 0.97), rgba(6, 28, 21, 0.98));
+}
+
+.mahjong-panel {
+  background:
+    linear-gradient(180deg, rgba(6, 18, 14, 0.26), rgba(5, 14, 11, 0.36)),
+    rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(14px);
+}
+
+.tile-face {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(237, 231, 221, 0.9));
+  box-shadow:
+    0 8px 18px rgba(2, 16, 13, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.88);
+}
+
+.tile-back {
+  background:
+    radial-gradient(circle at 30% 28%, rgba(255, 255, 255, 0.08), transparent 28%),
+    linear-gradient(180deg, #1a6256 0%, #0d4d42 46%, #15385a 100%);
+  position: relative;
+}
+
+.tile-back::before {
+  content: "";
+  position: absolute;
+  inset: 0.35rem;
+  border-radius: 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background:
+    linear-gradient(90deg, transparent 48%, rgba(255, 255, 255, 0.1) 50%, transparent 52%),
+    linear-gradient(0deg, transparent 48%, rgba(255, 255, 255, 0.08) 50%, transparent 52%);
+}
+
+.status-pill {
+  display: inline-flex;
+  min-width: 7rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.7rem 1rem;
+  color: rgba(236, 253, 245, 0.84);
+}
+
+.status-pill span {
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(209, 250, 229, 0.56);
+}
+
+.status-pill strong {
+  font-size: 0.96rem;
+  color: #fef3c7;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+}
+
+@media (max-width: 1200px) {
+  .mahjong-table {
+    min-width: 1120px;
+  }
+}
