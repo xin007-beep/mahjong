@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -29,7 +29,7 @@ jobs:
           cache-dependency-path: package-lock.json
 
       - name: Install web dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run tests
         run: npm test
@@ -54,6 +54,9 @@ jobs:
 
       - name: Sync Capacitor Android project
         run: npx cap sync android
+
+      - name: Ensure Gradle wrapper is executable
+        run: chmod +x android/gradlew
 
       - name: Build debug APK
         working-directory: android
