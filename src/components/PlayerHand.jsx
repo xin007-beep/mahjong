@@ -26,12 +26,17 @@ export default function PlayerHand({
   melds,
   selectedTileId,
   canInteract,
+  hasFloatingActionBar = false,
   onSelectTile,
 }) {
   const selectedTile = hand.find((tile) => tile.id === selectedTileId);
 
   return (
-    <section className="mahjong-panel rounded-[2rem] border border-white/8 px-5 py-4">
+    <section
+      className={`mahjong-panel rounded-[2rem] border border-white/8 px-5 py-4 ${
+        hasFloatingActionBar ? "pb-28" : ""
+      }`}
+    >
       <div className="mb-3 flex items-center justify-between gap-4">
         <div>
           <p className="text-xs uppercase tracking-[0.35em] text-emerald-100/52">South Seat</p>

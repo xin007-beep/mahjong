@@ -184,6 +184,7 @@ export default function App() {
     state.currentTurn === "south" &&
     !state.pendingClaim &&
     Boolean(state.selectedTileId);
+  const showFloatingActionBar = pendingOptions.length > 0 || canDiscard;
 
   return (
     <div className="mahjong-app min-h-screen text-stone-50">
@@ -248,6 +249,7 @@ export default function App() {
                 melds={southPlayer.melds}
                 selectedTileId={state.selectedTileId}
                 canInteract={state.phase === "discard" && state.currentTurn === "south" && !state.pendingClaim}
+                hasFloatingActionBar={showFloatingActionBar}
                 onSelectTile={(tileId) => dispatch({ type: "selectTile", tileId })}
               />
             </div>

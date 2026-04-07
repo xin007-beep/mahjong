@@ -34,7 +34,7 @@ export default function ActionBar({
   }
 
   return (
-    <section className="pointer-events-auto absolute inset-x-0 bottom-4 z-20 mx-auto flex w-fit min-w-[26rem] max-w-[calc(100%-2rem)] flex-wrap items-center justify-center gap-3 rounded-[1.8rem] border border-amber-100/12 bg-[rgba(5,20,15,0.92)] px-5 py-4 shadow-[0_28px_60px_rgba(0,0,0,0.36)] backdrop-blur-xl">
+    <section className="pointer-events-auto absolute inset-x-0 bottom-2 z-20 mx-auto flex w-fit min-w-[26rem] max-w-[calc(100%-2.5rem)] flex-wrap items-center justify-center gap-3 rounded-[1.8rem] border border-amber-100/12 bg-[rgba(5,20,15,0.92)] px-5 py-4 shadow-[0_28px_60px_rgba(0,0,0,0.36)] backdrop-blur-xl">
       {pendingOptions.length ? (
         <>
           <div className="mr-2 text-center">
